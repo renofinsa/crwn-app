@@ -5,6 +5,7 @@ import { selectCartItems } from './../../redux/selector/cart'
 import CartItem from './../cart-item'
 import CustomButton from './../button'
 import './index.scss'
+import { createStructuredSelector } from 'reselect'
 
 const index = ({cartItems}) => (
 <div className='cart-dropdown'>
@@ -17,8 +18,8 @@ const index = ({cartItems}) => (
   </div>
 );
 
-const mapStateToProps = (state) => ({
-    cartItems: selectCartItems(state)
+const mapStateToProps = createStructuredSelector({
+    cartItems: selectCartItems
 })
 
 export default connect(mapStateToProps)(index)
