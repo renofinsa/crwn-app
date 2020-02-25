@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SHOP_DATA from './data.js'
 import CollectionPreview from './../../components/collectionPreview'
 
-class Index extends Component {
+class index extends Component {
     constructor(){
         super()
         this.state = {
@@ -24,4 +24,4 @@ class Index extends Component {
     }
 }
 
-export default Index
+export default index
