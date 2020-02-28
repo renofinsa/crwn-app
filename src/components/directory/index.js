@@ -6,7 +6,7 @@ import './index.scss'
 
 import MenuItem from './../menu-item/'
 
-const Directory = ({sections}) => (
+const index = ({sections}) => (
     <div className='directory-menu'>
         {
             sections.map(({ id, ...otherSectionProps}) => (
@@ -20,4 +20,4 @@ const mapStateToProps = createStructuredSelector({
     sections: selectDirectorySections
 })
 
-export default connect(mapStateToProps)(Directory)
+export default connect(mapStateToProps)(index)
