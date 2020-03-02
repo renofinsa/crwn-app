@@ -4,7 +4,11 @@ import logger from 'redux-logger'
 
 import indexReducer from './index'
 
-const middlewares = [logger]
+const middlewares = []
+
+if (process.env.NODE_ENV === 'development') {
+    middlewares.push(logger)
+}
 
 export const store = createStore(indexReducer, applyMiddleware(...middlewares)
 +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
